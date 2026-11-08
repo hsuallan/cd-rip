@@ -6,6 +6,33 @@
 
 ---
 
+## 🎬 實機操作展示 (Workflow Demo)
+
+<div align="center">
+  <video src="images/demo_edited.mp4" controls width="100%" style="max-width: 860px;"></video>
+  <p><em>▲ 完整操作示範：從光碟音訊擷取、AI 標籤解析到批次歸檔流程（若瀏覽器不支援內嵌播放，請<a href="images/demo_edited.mp4">點此觀看 Demo 影片</a>）</em></p>
+</div>
+
+---
+
+## 📸 介面與功能導覽 (Interface Walkthrough)
+
+### 1. 連續轉檔分頁 (Continuous Ripping)
+> **原生光碟音訊擷取**：免安裝 EAC 等外部軟體，即時顯示各音軌進度與整體進度，擷取完畢智慧自動退片，專為多張 CD 連續數位化打造。
+
+<p align="center">
+  <img src="images/tab1.jpg" alt="連續轉檔分頁" width="860" />
+</p>
+
+### 2. 批次歸檔分頁 (Batch Archiving & AI Tagging)
+> **AI 標籤解析與封面內嵌**：貼上 AI 整理的曲目 CSV 立即自動生成預覽表格；支援剪貼簿直接貼上封面圖檔 (`Ctrl+V`)，一鍵批次完成寫標籤、轉碼與目錄整理。
+
+<p align="center">
+  <img src="images/tab2.jpg" alt="批次歸檔分頁" width="860" />
+</p>
+
+---
+
 ## 🌟 系統特色 (Features)
 
 1. **現代化 Material 3 桌面介面**：採用 Flet 打造，支援多國語言即時切換（繁體中文、English、日本語、简体中文）與深淺主題模式。

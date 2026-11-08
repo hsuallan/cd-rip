@@ -6,6 +6,33 @@
 
 ---
 
+## 🎬 操作デモ動画 (Workflow Demo)
+
+<div align="center">
+  <video src="images/demo_edited.mp4" controls width="100%" style="max-width: 860px;"></video>
+  <p><em>▲ 操作フロー実機デモ：CD 音声抽出から AI タグ解析、一括アーカイブまで（<a href="images/demo_edited.mp4">Demo 動画の直接再生・ダウンロードはこちら</a>）</em></p>
+</div>
+
+---
+
+## 📸 画面・機能紹介 (Interface Walkthrough)
+
+### 1. 連続リッピングタブ (Continuous Ripping)
+> **ネイティブ CD 音声抽出**：EAC 等の外部ソフト不要。トラック別および全体の進行状況をリアルタイム表示し、取り込み完了時に自動でドライブトレイを排出します。
+
+<p align="center">
+  <img src="images/tab1.jpg" alt="連続リッピングタブ" width="860" />
+</p>
+
+### 2. 一括アーカイブタブ (Batch Archiving & AI Tagging)
+> **AI タグ解析＆ジャケット埋め込み**：AI が生成した曲目 CSV を貼り付けるだけで即座に表プレビュー。クリップボードからの画像貼り付け（`Ctrl+V`）に対応し、ワンクリックで FLAC タグ書き込みとフォルダ整理を完結します。
+
+<p align="center">
+  <img src="images/tab2.jpg" alt="一括アーカイブタブ" width="860" />
+</p>
+
+---
+
 ## 🌟 主な特徴 (Features)
 
 1. **モダンな Material 3 デスクトップ GUI**：Flet を採用し、実行時リアルタイム多言語切替（日本語、繁体中国語、英語、簡体中国語）とダーク／ライトテーマの切替に対応。

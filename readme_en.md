@@ -6,6 +6,33 @@ An efficient, automated digitization solution for doujin and music CDs. Powered 
 
 ---
 
+## 🎬 Workflow Demo
+
+<div align="center">
+  <video src="images/demo_edited.mp4" controls width="100%" style="max-width: 860px;"></video>
+  <p><em>▲ Complete workflow demo: from CD audio extraction and AI tagging to batch archiving (<a href="images/demo_edited.mp4">Click here to watch / download the demo video</a>)</em></p>
+</div>
+
+---
+
+## 📸 Interface Walkthrough
+
+### 1. Continuous Rip Tab
+> **Native CD Audio Extraction**: Direct bit-perfect ripping without external dependencies like EAC. Displays real-time track and total progress with automatic tray ejection upon completion.
+
+<p align="center">
+  <img src="images/tab1.jpg" alt="Continuous Rip Tab" width="860" />
+</p>
+
+### 2. Batch Archiving Tab
+> **AI Tagging & Cover Art Integration**: Paste AI-generated CSV metadata for an instant tabular preview. Supports direct clipboard cover pasting (`Ctrl+V`), single-click batch FLAC tagging, and automated directory reorganization.
+
+<p align="center">
+  <img src="images/tab2.jpg" alt="Batch Archiving Tab" width="860" />
+</p>
+
+---
+
 ## 🌟 Key Features
 
 1. **Modern Material 3 Desktop GUI**: Built with Flet, supporting dynamic runtime language switching (Traditional Chinese, English, Japanese, Simplified Chinese) and light/dark theme modes.
