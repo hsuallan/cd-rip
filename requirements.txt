@@ -3,6 +3,7 @@ soundfile>=0.12.0
 numpy>=1.24.0
 pywin32>=305
 flet>=1.1.2
+flet-desktop>=1.1.2
 flet-cli>=1.1.2
 Pillow>=10.0.0
 winotify>=1.1.0
