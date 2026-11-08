@@ -1,0 +1,21 @@
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+*.spec
+
+# Build & Release Artifacts
+build/
+dist/
+*.zip
+
+# Rip temporary & output files
+temp/
+temp_unprocessed/
+output/
+test_workspace/
+
+# Flet & Virtual Environments
+.flet/
+.venv/
+venv/
+ENV/

@@ -1,0 +1,63 @@
+name: Build and Release Windows Executable
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Windows Executable
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: |
+          python -m unittest discover
+
+      - name: Build Standalone Executable with PyInstaller
+        run: |
+          pyinstaller --noconfirm --onedir --windowed --name "CD-Rip-Tool" --collect-all flet --collect-all flet_desktop --collect-all soundfile --collect-all _soundfile_data --add-data "config.ini;." --add-data "locales;locales" main.py
+
+      - name: Prepare Release Package
+        shell: pwsh
+        run: |
+          Copy-Item -Path "config.ini" -Destination "dist\CD-Rip-Tool\" -Force
+          Copy-Item -Path "README.md" -Destination "dist\CD-Rip-Tool\" -Force
+          Copy-Item -Path "readme_en.md" -Destination "dist\CD-Rip-Tool\" -Force
+          Copy-Item -Path "readme_jp.md" -Destination "dist\CD-Rip-Tool\" -Force
+          Copy-Item -Path "locales" -Destination "dist\CD-Rip-Tool\locales" -Recurse -Force
+          Compress-Archive -Path "dist\CD-Rip-Tool\*" -DestinationPath "CD-Rip-Tool-windows-x64.zip" -Force
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CD-Rip-Tool-windows-x64
+          path: CD-Rip-Tool-windows-x64.zip
+          if-no-files-found: error
+
+      - name: Create Release and Upload Asset (On Tags)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: CD-Rip-Tool-windows-x64.zip
+          draft: false
+          prerelease: false
+          generate_release_notes: true
